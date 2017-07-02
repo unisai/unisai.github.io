@@ -1,59 +1,185 @@
 :root {
-  --bgColorA: #efda4c;
+  --bgColorA: #001f3f;
   --bgColorB: #caa3ac;
   --bgColorC: #42fea2;
   --bgColorD: #a49d51;
 }
 
+@font-face {
+font-family: 'Indie Flower', cursive;
+}
+
+p {
+  font-size: 18px;
+}
+
 .grid-port-folio {
   display: grid;
-  grid-template-columns: 1fr repeat(6, minmax(auto, 10em)) 1fr;
-  grid-template-rows: minmax(5em, auto) 1fr auto minmax(5em, auto);
- }
- 
-.grid-container {
-  grid-column: span 8;
-  background: var(--bgColorA);
-}
- 
-.grid-main {
-  grid-column: 1/6;
-  background: var(--bgColorB);
-}
- 
-.grid-side {
-  grid-column: 6/9;
-  background: var(--bgColorC);
-}
-
-.grid-twin {
-  grid-column: 1/5;
-  grid-row: 3/4;
-  background: var(--bgColorD);
-}
-
-.grid-twin:last-of-type {
-  grid-column: 5/9;
+  grid-template-areas:"header nav nav nav" "main main main main" "footer footer footer footer";
+  grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: 5em 1fr minmax(2em, auto) repeat(3, minmax(2em, auto)) 5em;
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  grid-area: header;
+  background: var(--bgColorA);
+  padding-left: 5em;
+  color: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-weight: normal;
 }
 
-.header-logo {
-  width: 30%;
+.nav {
+  background: var(--bgColorA);
+  grid-area: nav;
+  text-align: right;
+  padding: 8px;
+  padding-right: 5em;
 }
 
-.header-nav {
-  width: 70%;
+.ul {
+ padding:0;
 }
 
-.header-nav ul li {
+.ul li {
   list-style-type: none;
   display: inline-block;
-  min-width: 150px;
+  text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+.nav ul li {
+  min-width: 100px;
+  padding: 5px 2px;
+  margin: 2px;
+}
+
+.nav ul li a {
+  color: #fff;
+}
+
+.grid-main {
+  grid-area: main;
+  background: url(../images/bg2.jpg);
+
+  background-size: cover;
+  min-height: 300px;
+  background-position: center;
+}
+
+
+.main-intro h2 {
+  font-size: 40px;
+  text-align: left;
+}
+
+.main-intro p {
+  font-size: 20px;
+}
+
+.main-intro p span {
+  background: #eda;
+  padding: 1px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex .self {
+  margin-right: 30px;
+}
+
+.flex .intro {
+  padding-left:30px;
+  border-left: 1px solid #123;
+  text-align: justify;
+}
+
+#about, #skills, #portfolio, #contact {
+   padding: 10px;
+}
+
+.grid-main > div, .about, .portfolio, .contact {
+  margin: 15px 5em;
+}
+
+h2 {
+  text-align: center;
+}
+	
+.self {
+  margin: 10px;
+  padding: 10px;
+  max-height: 328px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 3px 3px #aaa;
+}
+
+.self > div {
+  padding: 15px 30px;
+  background: #deb;
+  border: 1px solid #aaa;
+}
+
+.self--image {
+  width: 100%;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.self--image img {
+  border-radius: 50%;
+  padding: 5px 20px;
+}
+
+.self--details {
+  text-align: center;
+}
+
+.self--details li {
+  padding: 1px;
+}
+
+.about {
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
+
+.grid-twin-a {
+  grid-column: col/span 2;
+  grid-row: 4/5;
+  margin-left: 5em;
+}
+
+.grid-twin-b {
+  grid-column: col 3/span 2;
+  grid-row: 4/5;
+  background-image:url(../images/skills.png);
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  height: 200px;
+  margin-right: 5em;
+}
+
+.portfolio {
+  grid-column: 1/5;
+  grid-row: 5/6;
+  background: var(--bgColorB);
+}
+
+.contact {
+  grid-column: 1/5;
+  grid-row: 6/7;
+  background: var(--bgColorC);
+}
+
+footer {
+  background: var(--bgColorA);
+  grid-area: footer;
+  grid-row: 7/8;
+}
