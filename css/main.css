@@ -38,7 +38,7 @@ p {
 }
 
 .ul {
- padding:0;
+  padding:0;
 }
 
 .ul li {
@@ -64,12 +64,10 @@ a {
 .grid-main {
   grid-area: main;
   background: url(../images/bg2.jpg);
-
   background-size: cover;
   min-height: 300px;
   background-position: center;
 }
-
 
 .main-intro h2 {
   font-size: 40px;
@@ -100,7 +98,7 @@ a {
 }
 
 #about, #skills, #portfolio, #contact {
-   padding: 10px;
+  padding: 10px;
 }
 
 .grid-main > div, .about, .portfolio, .contact {
@@ -182,4 +180,64 @@ footer {
   background: var(--bgColorA);
   grid-area: footer;
   grid-row: 7/8;
+}
+
+@media screen and (max-width: 44em) {
+
+  .grid-port-folio {
+    display: grid;
+    grid-template-areas:"header header header nav" "main main main main" "footer footer footer footer";
+    grid-template-columns: repeat(4, [col] 1fr);
+    grid-template-rows: 5em 1fr repeat(5, minmax(2em, auto)) 5em;
+  }
+
+  .grid-main > div, .about, .grid-twin-a, .grid-twin-b, .portfolio, .contact {
+    margin: 5px 20px;
+  }
+
+  .header {
+     padding-left: 15px;
+  }
+
+  .flex {
+    displaY: block;
+  }
+
+  .flex .self {
+    margin: 0 20px;
+  }
+
+  .flex .intro {
+    padding-left: 0;
+    border-left: none;
+    text-align: justify;
+    width: 100%;
+  }
+
+  .grid-twin-a {
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+
+  .grid-twin-b {
+    grid-column: 1/5;
+    grid-row: 5/6;
+  }
+
+  .portfolio {
+    grid-column: 1/5;
+    grid-row: 6/7;
+  }
+
+  .contact {
+    grid-column: 1/5;
+    grid-row: 7/8;
+  }
+
+  footer {
+    background: var(--bgColorA);
+    grid-area: footer;
+    grid-row: 8/9;
+  }
+
 }
