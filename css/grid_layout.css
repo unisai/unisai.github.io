@@ -1,0 +1,10 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(90px, auto);
+}
+
+.logo, .intro {
+    grid-column: 1/-1;
+}
+  

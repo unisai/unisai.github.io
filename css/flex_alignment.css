@@ -1,0 +1,19 @@
+.intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.intro_main {
+    align-self: center;
+}
+
+.intro_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.intro_nav li {
+    flex-grow: 1;
+}
