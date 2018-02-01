@@ -4,7 +4,7 @@
     grid-auto-rows: minmax(90px, auto);
 }
 
-.logo, .intro {
+.logo, .intro, .about, .gallery, .contact {
     grid-column: 1/-1;
 }
   
