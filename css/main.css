@@ -1,27 +1,45 @@
 .intro, .about, .gallery, .contact {
-  margin-top: 120px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 8.5rem);
+}
+
+.intro, .gallery {
+  background: chocolate;
+}
+
+.about, .contact {
+  background: aquamarine;
 }
 
 .intro_main {
   font-size: 3rem;
 }
 
-.intro_nav, .intro_nav ul {
+.intro_nav {
+  width: 100px;
+  position: fixed;
+  right: 0;
+}
+
+.intro_nav {
   height: 100%;
 }
 
 .intro_nav ul {
   margin: 0;
+  padding: 0;
+  height: 90%;
 }
 
 .intro_nav li {
-  text-align: right;
   list-style-type: none;
 }
 
-.logo h1, .intro, .about, .gallery, .contact {
+.logo h1 {
   padding: .5rem 2.5rem;
+}
+
+.intro, .about, .gallery, .contact {
+  padding: 6rem 100px 2.5rem 2.5rem ;
 }
 
 .logo {
