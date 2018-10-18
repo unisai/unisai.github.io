@@ -3,7 +3,7 @@
 
 <head>
 	<meta type="http-equiv" content-type="content/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width; initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Visxplore</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/grid_layout.css" />
@@ -26,18 +26,26 @@
 				</div>
 				<nav class="intro_nav">
 					<ul>
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
+						<li>
+							<img onclick="scrollPortfolioView('intro')" src="./images/switch/home.svg" alt="home" width="50" height="50" author="svg by vectors market from flat icons"/>
+						</li>
+						<li>
+							<img onclick="scrollPortfolioView('about')" src="./images/switch/about.svg" alt="about" width="50" height="50" author="svg by vectors market from flat icons"/>
+						</li>
+						<li>
+							<img onclick="scrollPortfolioView('gallery')" src="./images/switch/gallery.svg" alt="gallery" width="50" height="50" author="svg by vectors market from flat icons"/>
+						</li>
+						<li>
+							<img onclick="scrollPortfolioView('contact')" src="./images/switch/contact.svg" alt="contact" width="50" height="50" author="svg by vectors market from flat icons"/>
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</section>
 		<section class="about">
 			<h2>About Me</h2>
-			<p>Hi There! I'm Viswa Sai, a Front end Developer from India. I've into the Web Industry by Passion. It's the enthusiasm
-				that driven by watching my coded HTML live on the browser, which made my day happy, made my profession.</p>
+			<p>Hi There! I'm Viswa Sai, a Front end Developer from India. I got into the Web Industry by Passion. It's my enthusiasm,
+				which made me driven by watching my coded HTML live on the browser, which made my day happy, made my profession.</p>
 			<h2>Skills</h2>
 			<ul>
 				<li>HTML 5</li>
@@ -63,6 +71,14 @@
 			<p>Email: visvsai@gmail.com</p>
 		</section>
 	</div>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+		function scrollPortfolioView(classPath) {
+			document.querySelector('.'+ classPath).scrollIntoView({
+				behavior: 'smooth'
+			});
+		}
+	</script>
 </body>
 
 </html>
