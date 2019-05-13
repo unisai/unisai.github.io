@@ -7,3 +7,12 @@
 .logo, .intro, .about, .gallery, .contact {
     grid-column: 1/-1;
 }
+
+
+@media screen and (orientation:portrait) {
+
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr) 70px;
+    }
+
+}

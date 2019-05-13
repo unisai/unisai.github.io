@@ -4,17 +4,46 @@ body {
 
 .intro, .about, .gallery, .contact {
   height: calc(100vh - 8.5rem);
+  overflow: hidden;
 }
 
-.intro, .gallery {
-  background: chocolate;
+.intro {  
+  background-image: url(https://avatars0.githubusercontent.com/u/20577139);
+  background-repeat: no-repeat;
+  background-size: 70vw 100vh;
+  background-position: right -10vw top;
+}
+
+.gallery {
+  background: linear-gradient(to right, #232526, #414345);
+  text-align: center;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0px auto;
 }
 
 .about, .contact {
-  background: aquamarine;
+  background: linear-gradient(to right, #ec6f66, #f3a183);
+  text-align: center;
 }
 
-.intro_main {
+.about_skill-table {
+  overflow-x: scroll;
+}
+
+.about_skill-table table {
+  margin: 1rem auto;
+}
+
+.about_skill-table th {
+  min-width: 150px;
+}
+
+.intro_main p {
   font-size: 3rem;
 }
 
@@ -50,4 +79,22 @@ body {
   position: fixed;
   background: #456456;
   color: #FFFFFF;
+}
+
+@media screen and (orientation:portrait) {
+
+  .intro {
+    background-size: 120% 100%;
+    background-position: initial;
+    color: deepskyblue;
+  }
+
+  .intro, .about, .gallery, .contact {
+    padding: 6rem 70px 2.5rem 1rem;
+  }
+
+  .intro_nav {
+    width: 70px;
+  }
+
 }
