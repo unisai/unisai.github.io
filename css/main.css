@@ -1,22 +1,35 @@
 body {
   overflow: hidden;
+  color: #FFDC00;
 }
 
 .intro, .about, .gallery, .contact {
-  height: calc(100vh - 8.5rem);
-  overflow: hidden;
+  height: calc(100vh - 6.5rem);
+  overflow: hidden;  
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.gallery, .about, .contact {
+  text-align: center;
+}
+
+/* ? Pics From https://dribbble.com/kunchevsky */
+
 .intro {  
-  background-image: url(https://avatars0.githubusercontent.com/u/20577139);
-  background-repeat: no-repeat;
-  background-size: 70vw 100vh;
-  background-position: right -10vw top;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/background/animated-pattern.gif);
 }
 
 .gallery {
-  background: linear-gradient(to right, #232526, #414345);
-  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/background/design-pattern.gif);
+}
+
+.about {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/background/mechanical-pattern.gif);
+}
+
+.contact {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/background/communication-pattern.gif);
 }
 
 .gallery img {
@@ -26,13 +39,8 @@ body {
   margin: 0px auto;
 }
 
-.about, .contact {
-  background: linear-gradient(to right, #ec6f66, #f3a183);
-  text-align: center;
-}
-
 .about_skill-table {
-  overflow-x: scroll;
+  overflow: auto;
 }
 
 .about_skill-table table {
@@ -51,6 +59,7 @@ body {
   width: 100px;
   position: fixed;
   right: 0;
+  text-align: center;
 }
 
 .intro_nav {
@@ -67,30 +76,31 @@ body {
   list-style-type: none;
 }
 
-.logo h1 {
-  padding: .5rem 2.5rem;
+.intro_nav li:hover {
+  cursor: pointer;
+  color: #FF851B;
 }
 
 .intro, .about, .gallery, .contact {
-  padding: 6rem 100px 2.5rem 2.5rem ;
+  padding: 4rem 100px 2.5rem 2.5rem ;
 }
 
 .logo {
   position: fixed;
-  background: #456456;
   color: #FFFFFF;
+}
+
+.logo h1 {
+  padding: .5rem 2.5rem;
+  margin: 0;
+  background: #FF851B;
+  border-radius: 15px;
 }
 
 @media screen and (orientation:portrait) {
 
-  .intro {
-    background-size: 120% 100%;
-    background-position: initial;
-    color: deepskyblue;
-  }
-
   .intro, .about, .gallery, .contact {
-    padding: 6rem 70px 2.5rem 1rem;
+    padding: 4rem 70px 2.5rem 1rem;
   }
 
   .intro_nav {
