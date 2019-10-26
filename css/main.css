@@ -32,11 +32,8 @@ body {
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(../images/background/communication-pattern.gif);
 }
 
-.gallery img {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  margin: 0px auto;
+.gallery a, .contact a  {
+  color: red;
 }
 
 .about_skill-table {
